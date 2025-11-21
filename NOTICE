@@ -1,0 +1,8 @@
+NOTICE
+
+This project uses the B2MML/BATCHML schemas as a Git submodule.
+
+The B2MML/BATCHML project is copyrighted by 
+MESA International and distributed under the MESA License.
+
+See: third_party/b2mml
