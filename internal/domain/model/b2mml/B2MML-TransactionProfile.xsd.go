@@ -3,7 +3,7 @@
 package b2mml
 
 // TransactionProfile ...
-type TransactionProfile *TransactionProfileType
+// type TransactionProfile *TransactionProfileType
 
 // GetTransactionProfile ...
 type GetTransactionProfile *GetTransactionProfileType
@@ -61,10 +61,10 @@ type TransactionVerbType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                *TransGetType             `xml:"Get"`
-	TransactionProfile []*TransactionProfileType `xml:"TransactionProfile"`
-}
+// type DataArea struct {
+// 	Get                *TransGetType             `xml:"Get"`
+// 	TransactionProfile []*TransactionProfileType `xml:"TransactionProfile"`
+// }
 
 // GetTransactionProfileType ...
 type GetTransactionProfileType struct {

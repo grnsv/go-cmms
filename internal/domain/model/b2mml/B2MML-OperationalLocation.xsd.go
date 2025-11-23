@@ -5,17 +5,17 @@ package b2mml
 // OperationalLocationInformation is Operational locations define the logical or physical places in which resources are located or are expected to be located within a plant.
 // Operational locations may be made up of smaller operational locations. An operational location may belong to one or more operational location classes.
 // An operational location class may be a specialization of one or more operational location classes.
-type OperationalLocationInformation *OperationalLocationInformationType
+// type OperationalLocationInformation *OperationalLocationInformationType
 
 // OperationalLocationClass is A representation of a grouping of operational locations with similar characteristics for a definite purpose
 // such as manufacturing operations definition, scheduling, capability and performance shall be presented as an
 // operational location class. Any operational location may be a member of zero or more operational location classes.
-type OperationalLocationClass *OperationalLocationClassType
+// type OperationalLocationClass *OperationalLocationClassType
 
 // OperationalLocation is A logical or physical location where a material lot, material sublot, equipment, physical asset or person
 // is located or expected to be located shall be presented as an operational location. Operational locations
 // may be made up of other operational locations.
-type OperationalLocation *OperationalLocationType
+// type OperationalLocation *OperationalLocationType
 
 // GetOperationalLocation ...
 type GetOperationalLocation *GetOperationalLocationType
@@ -153,10 +153,10 @@ type OperationalLocationPropertyType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                            *TransGetType                         `xml:"Get"`
-	OperationalLocationInformation []*OperationalLocationInformationType `xml:"OperationalLocationInformation"`
-}
+// type DataArea struct {
+// 	Get                            *TransGetType                         `xml:"Get"`
+// 	OperationalLocationInformation []*OperationalLocationInformationType `xml:"OperationalLocationInformation"`
+// }
 
 // GetOperationalLocationInformationType ...
 type GetOperationalLocationInformationType struct {

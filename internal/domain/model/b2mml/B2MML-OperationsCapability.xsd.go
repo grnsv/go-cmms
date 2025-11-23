@@ -3,10 +3,10 @@
 package b2mml
 
 // OperationsCapabilityInformation ...
-type OperationsCapabilityInformation *OperationsCapabilityInformationType
+// type OperationsCapabilityInformation *OperationsCapabilityInformationType
 
 // OperationsCapability ...
-type OperationsCapability *OperationsCapabilityType
+// type OperationsCapability *OperationsCapabilityType
 
 // GetOperationsCapability ...
 type GetOperationsCapability *GetOperationsCapabilityType
@@ -131,10 +131,10 @@ type OpOperationsSegmentCapabilityType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                             *TransGetType                          `xml:"Get"`
-	OperationsCapabilityInformation []*OperationsCapabilityInformationType `xml:"OperationsCapabilityInformation"`
-}
+// type DataArea struct {
+// 	Get                             *TransGetType                          `xml:"Get"`
+// 	OperationsCapabilityInformation []*OperationsCapabilityInformationType `xml:"OperationsCapabilityInformation"`
+// }
 
 // GetOperationsCapabilityInformationType ...
 type GetOperationsCapabilityInformationType struct {

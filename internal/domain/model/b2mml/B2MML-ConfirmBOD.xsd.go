@@ -6,10 +6,10 @@ package b2mml
 type ConfirmBOD *ConfirmBODType
 
 // DataArea ...
-type DataArea struct {
-	Confirm *TransConfirmType `xml:"Confirm"`
-	BOD     []*BODType        `xml:"BOD"`
-}
+// type DataArea struct {
+// 	Confirm *TransConfirmType `xml:"Confirm"`
+// 	BOD     []*BODType        `xml:"BOD"`
+// }
 
 // ConfirmBODType ...
 type ConfirmBODType struct {

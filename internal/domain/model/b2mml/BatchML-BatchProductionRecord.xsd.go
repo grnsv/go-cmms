@@ -3,7 +3,7 @@
 package b2mml
 
 // BatchProductionRecord ...
-type BatchProductionRecord *BatchProductionRecordType
+// type BatchProductionRecord *BatchProductionRecordType
 
 // GetBatchProductionRecord ...
 type GetBatchProductionRecord *GetBatchProductionRecordType
@@ -418,10 +418,10 @@ type WorkDirectiveRecordType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                   *TransGetType                `xml:"Get"`
-	BatchProductionRecord []*BatchProductionRecordType `xml:"BatchProductionRecord"`
-}
+// type DataArea struct {
+// 	Get                   *TransGetType                `xml:"Get"`
+// 	BatchProductionRecord []*BatchProductionRecordType `xml:"BatchProductionRecord"`
+// }
 
 // GetBatchProductionRecordType ...
 type GetBatchProductionRecordType struct {

@@ -175,8 +175,8 @@ type OperationsDefinition struct {
 }
 
 // ProductInformation ...
-type ProductInformation struct {
-}
+// type ProductInformation struct {
+// }
 
 // OperationsMaterialBill ...
 type OperationsMaterialBill struct {

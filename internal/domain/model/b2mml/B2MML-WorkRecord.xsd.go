@@ -3,10 +3,10 @@
 package b2mml
 
 // WorkRecord ...
-type WorkRecord *WorkRecordType
+// type WorkRecord *WorkRecordType
 
 // WorkRecordSpecification ...
-type WorkRecordSpecification *WorkRecordSpecificationType
+// type WorkRecordSpecification *WorkRecordSpecificationType
 
 // GetWorkRecord ...
 type GetWorkRecord *GetWorkRecordType
@@ -128,10 +128,10 @@ type WorkRecordSpecificationType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get        *TransGetType     `xml:"Get"`
-	WorkRecord []*WorkRecordType `xml:"WorkRecord"`
-}
+// type DataArea struct {
+// 	Get        *TransGetType     `xml:"Get"`
+// 	WorkRecord []*WorkRecordType `xml:"WorkRecord"`
+// }
 
 // GetWorkRecordType ...
 type GetWorkRecordType struct {

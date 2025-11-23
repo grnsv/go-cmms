@@ -3,13 +3,13 @@
 package b2mml
 
 // WorkCalendarInformation ...
-type WorkCalendarInformation *WorkCalendarInformationType
+// type WorkCalendarInformation *WorkCalendarInformationType
 
 // WorkCalendar ...
-type WorkCalendar *WorkCalendarType
+// type WorkCalendar *WorkCalendarType
 
 // WorkCalendarDefinition ...
-type WorkCalendarDefinition *WorkCalendarDefinitionType
+// type WorkCalendarDefinition *WorkCalendarDefinitionType
 
 // GetWorkCalendar ...
 type GetWorkCalendar *GetWorkCalendarType
@@ -193,10 +193,10 @@ type WorkCalendarEntryPropertyType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                     *TransGetType                  `xml:"Get"`
-	WorkCalendarInformation []*WorkCalendarInformationType `xml:"WorkCalendarInformation"`
-}
+// type DataArea struct {
+// 	Get                     *TransGetType                  `xml:"Get"`
+// 	WorkCalendarInformation []*WorkCalendarInformationType `xml:"WorkCalendarInformation"`
+// }
 
 // GetWorkCalendarInformationType ...
 type GetWorkCalendarInformationType struct {

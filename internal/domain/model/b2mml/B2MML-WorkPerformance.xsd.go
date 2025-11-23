@@ -3,16 +3,16 @@
 package b2mml
 
 // WorkPerformance ...
-type WorkPerformance *WorkPerformanceType
+// type WorkPerformance *WorkPerformanceType
 
 // WorkResponse ...
-type WorkResponse *WorkResponseType
+// type WorkResponse *WorkResponseType
 
 // JobResponse ...
-type JobResponse *JobResponseType
+// type JobResponse *JobResponseType
 
 // JobResponseList ...
-type JobResponseList *JobResponseListType
+// type JobResponseList *JobResponseListType
 
 // GetWorkPerformance ...
 type GetWorkPerformance *GetWorkPerformanceType
@@ -188,10 +188,10 @@ type JobResponseListType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get             *TransGetType          `xml:"Get"`
-	WorkPerformance []*WorkPerformanceType `xml:"WorkPerformance"`
-}
+// type DataArea struct {
+// 	Get             *TransGetType          `xml:"Get"`
+// 	WorkPerformance []*WorkPerformanceType `xml:"WorkPerformance"`
+// }
 
 // GetWorkPerformanceType ...
 type GetWorkPerformanceType struct {

@@ -3,16 +3,16 @@
 package b2mml
 
 // WorkSchedule ...
-type WorkSchedule *WorkScheduleType
+// type WorkSchedule *WorkScheduleType
 
 // WorkRequest ...
-type WorkRequest *WorkRequestType
+// type WorkRequest *WorkRequestType
 
 // JobList ...
-type JobList *JobListType
+// type JobList *JobListType
 
 // JobOrder ...
-type JobOrder *JobOrderType
+// type JobOrder *JobOrderType
 
 // GetWorkSchedule ...
 type GetWorkSchedule *GetWorkScheduleType
@@ -136,10 +136,10 @@ type JobOrderType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get          *TransGetType       `xml:"Get"`
-	WorkSchedule []*WorkScheduleType `xml:"WorkSchedule"`
-}
+// type DataArea struct {
+// 	Get          *TransGetType       `xml:"Get"`
+// 	WorkSchedule []*WorkScheduleType `xml:"WorkSchedule"`
+// }
 
 // GetWorkScheduleType ...
 type GetWorkScheduleType struct {

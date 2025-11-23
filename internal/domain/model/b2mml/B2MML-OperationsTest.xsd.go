@@ -3,13 +3,13 @@
 package b2mml
 
 // OperationsTestInformation is Operations test information is exchanged to communicate criteria that are to be applied to perform tests of personnel, equipment, physical assets and/or materials and to communicate the results of those tests.
-type OperationsTestInformation *OperationsTestInformationType
+// type OperationsTestInformation *OperationsTestInformationType
 
 // TestSpecification is The test specification details the test specification criteria and the tested evaluated property(s)
 // required for a testable object to match the quality or performance requirements of the business or
 // particular customers. A test specification may contain other test specifications to form a hierarchy
 // of test specifications.
-type TestSpecification *TestSpecificationType
+// type TestSpecification *TestSpecificationType
 
 // TestResult is Operations test information is exchanged to communicate test result for evaluated test criteria and/or
 // property measurement for performed test specifications of personnel, equipment, physical assets and/or
@@ -17,7 +17,7 @@ type TestSpecification *TestSpecificationType
 // measurement of the tested evaluated property(s) required for a testable object to match the quality
 // or performance requirements of a test specification. A test result may contain other test results to
 // form a hierarchy of test specifications.
-type TestResult *TestResultType
+// type TestResult *TestResultType
 
 // GetOperationsTestInformation ...
 type GetOperationsTestInformation *GetOperationsTestInformationType
@@ -182,10 +182,10 @@ type PropertyMeasurementType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                       *TransGetType                    `xml:"Get"`
-	OperationsTestInformation []*OperationsTestInformationType `xml:"OperationsTestInformation"`
-}
+// type DataArea struct {
+// 	Get                       *TransGetType                    `xml:"Get"`
+// 	OperationsTestInformation []*OperationsTestInformationType `xml:"OperationsTestInformation"`
+// }
 
 // GetOperationsTestInformationType ...
 type GetOperationsTestInformationType struct {

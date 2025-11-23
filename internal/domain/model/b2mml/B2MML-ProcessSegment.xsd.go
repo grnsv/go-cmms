@@ -3,7 +3,7 @@
 package b2mml
 
 // ProcessSegmentInformation ...
-type ProcessSegmentInformation *ProcessSegmentInformationType
+// type ProcessSegmentInformation *ProcessSegmentInformationType
 
 // ProcessSegment is A process segment lists the classes of personnel, equipment, physical assets, and material needed,
 // and/or it may present specific resources, such as specific equipment needed for the process segment.
@@ -15,7 +15,7 @@ type ProcessSegmentInformation *ProcessSegmentInformationType
 // segment responses and process segment capabilities shall not reference pattern process segments.
 // Where a process segment references a work master, the definition type (pattern or instance) of the
 // referenced work master shall have the same value as that of the process segment.
-type ProcessSegment *ProcessSegmentType
+// type ProcessSegment *ProcessSegmentType
 
 // GetProcessSegmentInformation ...
 type GetProcessSegmentInformation *GetProcessSegmentInformationType
@@ -224,10 +224,10 @@ type MaterialSegmentSpecificationPropertyType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                       *TransGetType                    `xml:"Get"`
-	ProcessSegmentInformation []*ProcessSegmentInformationType `xml:"ProcessSegmentInformation"`
-}
+// type DataArea struct {
+// 	Get                       *TransGetType                    `xml:"Get"`
+// 	ProcessSegmentInformation []*ProcessSegmentInformationType `xml:"ProcessSegmentInformation"`
+// }
 
 // GetProcessSegmentInformationType ...
 type GetProcessSegmentInformationType struct {

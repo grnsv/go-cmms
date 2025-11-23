@@ -3,13 +3,13 @@
 package b2mml
 
 // WorkAlertInformation ...
-type WorkAlertInformation *WorkAlertInformationType
+// type WorkAlertInformation *WorkAlertInformationType
 
 // WorkAlertDefinition ...
-type WorkAlertDefinition *WorkAlertDefinitionType
+// type WorkAlertDefinition *WorkAlertDefinitionType
 
 // WorkAlert ...
-type WorkAlert *WorkAlertType
+// type WorkAlert *WorkAlertType
 
 // GetWorkAlertInformation ...
 type GetWorkAlertInformation *GetWorkAlertInformationType
@@ -145,10 +145,10 @@ type WorkAlertPropertyType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                  *TransGetType               `xml:"Get"`
-	WorkAlertInformation []*WorkAlertInformationType `xml:"WorkAlertInformation"`
-}
+// type DataArea struct {
+// 	Get                  *TransGetType               `xml:"Get"`
+// 	WorkAlertInformation []*WorkAlertInformationType `xml:"WorkAlertInformation"`
+// }
 
 // GetWorkAlertInformationType ...
 type GetWorkAlertInformationType struct {

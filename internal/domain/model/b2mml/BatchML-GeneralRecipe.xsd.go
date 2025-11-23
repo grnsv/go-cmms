@@ -3,22 +3,22 @@
 package b2mml
 
 // GRecipeInformation ...
-type GRecipeInformation *GRecipeInformationType
+// type GRecipeInformation *GRecipeInformationType
 
 // ResourceConstraintLibrary ...
-type ResourceConstraintLibrary *ResourceConstraintLibraryType
+// type ResourceConstraintLibrary *ResourceConstraintLibraryType
 
 // ProcessElementLibrary ...
-type ProcessElementLibrary *ProcessElementLibraryType
+// type ProcessElementLibrary *ProcessElementLibraryType
 
 // GRecipe ...
-type GRecipe *GRecipeType
+// type GRecipe *GRecipeType
 
 // ResourceConstraint ...
-type ResourceConstraint *ResourceConstraintType
+// type ResourceConstraint *ResourceConstraintType
 
 // ProcessElement ...
-type ProcessElement *ProcessElementType
+// type ProcessElement *ProcessElementType
 
 // GetGRecipeInformation ...
 type GetGRecipeInformation *GetGRecipeInformationType
@@ -346,10 +346,10 @@ type SequenceOrderType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                *TransGetType             `xml:"Get"`
-	GRecipeInformation []*GRecipeInformationType `xml:"GRecipeInformation"`
-}
+// type DataArea struct {
+// 	Get                *TransGetType             `xml:"Get"`
+// 	GRecipeInformation []*GRecipeInformationType `xml:"GRecipeInformation"`
+// }
 
 // GetGRecipeInformationType ...
 type GetGRecipeInformationType struct {

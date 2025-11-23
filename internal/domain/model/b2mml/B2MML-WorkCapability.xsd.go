@@ -3,13 +3,13 @@
 package b2mml
 
 // WorkCapabilityInformation ...
-type WorkCapabilityInformation *WorkCapabilityInformationType
+// type WorkCapabilityInformation *WorkCapabilityInformationType
 
 // WorkCapability ...
-type WorkCapability *WorkCapabilityType
+// type WorkCapability *WorkCapabilityType
 
 // WorkMasterCapability ...
-type WorkMasterCapability *WorkMasterCapabilityType
+// type WorkMasterCapability *WorkMasterCapabilityType
 
 // GetWorkCapability ...
 type GetWorkCapability *GetWorkCapabilityType
@@ -136,10 +136,10 @@ type WorkMasterCapabilityType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                       *TransGetType                    `xml:"Get"`
-	WorkCapabilityInformation []*WorkCapabilityInformationType `xml:"WorkCapabilityInformation"`
-}
+// type DataArea struct {
+// 	Get                       *TransGetType                    `xml:"Get"`
+// 	WorkCapabilityInformation []*WorkCapabilityInformationType `xml:"WorkCapabilityInformation"`
+// }
 
 // GetWorkCapabilityInformationType ...
 type GetWorkCapabilityInformationType struct {

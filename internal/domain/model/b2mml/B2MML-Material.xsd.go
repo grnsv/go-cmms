@@ -3,19 +3,19 @@
 package b2mml
 
 // MaterialInformation ...
-type MaterialInformation *MaterialInformationType
+// type MaterialInformation *MaterialInformationType
 
 // MaterialClass ...
-type MaterialClass *MaterialClassType
+// type MaterialClass *MaterialClassType
 
 // MaterialDefinition ...
-type MaterialDefinition *MaterialDefinitionType
+// type MaterialDefinition *MaterialDefinitionType
 
 // MaterialLot ...
-type MaterialLot *MaterialLotType
+// type MaterialLot *MaterialLotType
 
 // MaterialSubLot ...
-type MaterialSubLot *MaterialSubLotType
+// type MaterialSubLot *MaterialSubLotType
 
 // GetMaterialInformation ...
 type GetMaterialInformation *GetMaterialInformationType
@@ -273,10 +273,10 @@ type MaterialSubLotType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                 *TransGetType              `xml:"Get"`
-	MaterialInformation []*MaterialInformationType `xml:"MaterialInformation"`
-}
+// type DataArea struct {
+// 	Get                 *TransGetType              `xml:"Get"`
+// 	MaterialInformation []*MaterialInformationType `xml:"MaterialInformation"`
+// }
 
 // GetMaterialInformationType ...
 type GetMaterialInformationType struct {

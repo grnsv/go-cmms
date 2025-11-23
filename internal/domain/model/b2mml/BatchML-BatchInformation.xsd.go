@@ -599,22 +599,22 @@ type BatchValueType struct {
 }
 
 // BatchInformation ...
-type BatchInformation *BatchInformationType
+// type BatchInformation *BatchInformationType
 
 // MasterRecipe ...
-type MasterRecipe *MasterRecipeType
+// type MasterRecipe *MasterRecipeType
 
 // ControlRecipe ...
-type ControlRecipe *ControlRecipeType
+// type ControlRecipe *ControlRecipeType
 
 // RecipeBuildingBlock ...
-type RecipeBuildingBlock *RecipeBuildingBlockType
+// type RecipeBuildingBlock *RecipeBuildingBlockType
 
 // EquipmentElement ...
-type EquipmentElement *EquipmentElementTypeType
+// type EquipmentElement *EquipmentElementTypeType
 
 // BatchList ...
-type BatchList *BatchListType
+// type BatchList *BatchListType
 
 // ActualBatchSize ...
 type ActualBatchSize *ActualBatchSizeType
@@ -635,7 +635,7 @@ type ApprovedBy *ApprovedByType
 type ApprovalDate *DateTimeType
 
 // ApprovalHistory ...
-type ApprovalHistory *ApprovalHistoryType
+// type ApprovalHistory *ApprovalHistoryType
 
 // Author ...
 type Author *AuthorType
@@ -644,13 +644,13 @@ type Author *AuthorType
 type BatchID *IdentifierType
 
 // BatchListEntry ...
-type BatchListEntry *BatchListEntryTypeType
+// type BatchListEntry *BatchListEntryTypeType
 
 // BatchPriority ...
 type BatchPriority *BatchPriorityType
 
 // BatchSize ...
-type BatchSize *BatchSizeType
+// type BatchSize *BatchSizeType
 
 // BuildingBlockElementID ...
 type BuildingBlockElementID *IdentifierType
@@ -665,7 +665,7 @@ type CampaignID *IdentifierType
 type ClassEquipmentID *IdentifierType
 
 // ClassInstanceAssociation ...
-type ClassInstanceAssociation *ClassInstanceAssociationType
+// type ClassInstanceAssociation *ClassInstanceAssociationType
 
 // Condition ...
 type Condition *ConditionType
@@ -677,7 +677,7 @@ type ConditionAnnotation *ConditionAnnotationType
 type ConnectionType *ConnectionTypeType
 
 // Constraint ...
-type Constraint *ConstraintType
+// type Constraint *ConstraintType
 
 // CreateDate ...
 type CreateDate *DateTimeType
@@ -701,13 +701,13 @@ type Description *DescriptionType
 type EffectiveDate *DateTimeType
 
 // Enumeration ...
-type Enumeration *EnumerationType
+// type Enumeration *EnumerationType
 
 // EnumerationNumber ...
 type EnumerationNumber *EnumerationNumberType
 
 // EnumerationSet ...
-type EnumerationSet *EnumerationSetType
+// type EnumerationSet *EnumerationSetType
 
 // EnumerationSetID ...
 type EnumerationSetID *IdentifierType
@@ -719,7 +719,7 @@ type EnumerationString *EnumerationStringType
 type EquipmentClassID *IdentifierType
 
 // EquipmentConnection ...
-type EquipmentConnection *EquipmentConnectionType
+// type EquipmentConnection *EquipmentConnectionType
 
 // EquipmentElementID ...
 type EquipmentElementID *IdentifierType
@@ -731,16 +731,16 @@ type EquipmentElementLevel *EquipmentLevelType
 type EquipmentID *BatchEquipmentIDType
 
 // EquipmentProceduralElement ...
-type EquipmentProceduralElement *EquipmentProceduralElementTypeType
+// type EquipmentProceduralElement *EquipmentProceduralElementTypeType
 
 // EquipmentProceduralElementClass ...
-type EquipmentProceduralElementClass *EquipmentProceduralElementClassType
+// type EquipmentProceduralElementClass *EquipmentProceduralElementClassType
 
 // EquipmentProceduralElementClassID ...
 type EquipmentProceduralElementClassID *IdentifierType
 
 // EquipmentRequirement ...
-type EquipmentRequirement *BatchEquipmentRequirementType
+// type EquipmentRequirement *BatchEquipmentRequirementType
 
 // EvaluationOrder ...
 type EvaluationOrder *EvaluationOrderType
@@ -755,28 +755,28 @@ type ExternalID *IdentifierType
 type FinalApprovalDate *DateTimeType
 
 // Formula ...
-type Formula *FormulaType
+// type Formula *FormulaType
 
 // FromEquipmentID ...
-type FromEquipmentID *IdentifierType
+// type FromEquipmentID *IdentifierType
 
 // FromID ...
-type FromID *FromIDType
+// type FromID *FromIDType
 
 // Header ...
-type Header *HeaderType
+// type Header *HeaderType
 
 // ID ...
 type ID *IdentifierType
 
 // IndividualApproval ...
-type IndividualApproval *IndividualApprovalType
+// type IndividualApproval *IndividualApprovalType
 
 // Link ...
-type Link *LinkTypeType
+// type Link *LinkTypeType
 
 // ListHeader ...
-type ListHeader *ListHeaderType
+// type ListHeader *ListHeaderType
 
 // LotID ...
 type LotID *IdentifierType
@@ -794,7 +794,7 @@ type Min *MinType
 type Mode *ModeType
 
 // ModificationLog ...
-type ModificationLog *ModificationLogType
+// type ModificationLog *ModificationLogType
 
 // ModifiedDate ...
 type ModifiedDate *DateTimeType
@@ -812,19 +812,19 @@ type OrderID *IdentifierType
 type Origin *OriginType
 
 // OtherInformation ...
-type OtherInformation *OtherInformationType
+// type OtherInformation *OtherInformationType
 
 // Parameter ...
-type Parameter *BatchParameterType
+// type Parameter *BatchParameterType
 
 // ParameterSubType ...
 type ParameterSubType *ParameterSubTypeType
 
 // ParameterType ...
-type ParameterType *ParameterTypeType
+// type ParameterType *ParameterTypeType
 
 // ProcedureLogic ...
-type ProcedureLogic *ProcedureLogicType
+// type ProcedureLogic *ProcedureLogicType
 
 // ProductID ...
 type ProductID *IdentifierType
@@ -833,10 +833,10 @@ type ProductID *IdentifierType
 type ProductName *IdentifierType
 
 // Property ...
-type Property *EquipmentElementPropertyType
+// type Property *EquipmentElementPropertyType
 
 // RecipeElement ...
-type RecipeElement *RecipeElementTypeType
+// type RecipeElement *RecipeElementTypeType
 
 // RecipeElementID ...
 type RecipeElementID *IdentifierType
@@ -884,22 +884,22 @@ type ScheduleStartTime *DateTimeType
 type StartCondition *DateTimeType
 
 // Step ...
-type Step *StepType
+// type Step *StepType
 
 // ToEquipmentID ...
 type ToEquipmentID *IdentifierType
 
 // ToID ...
-type ToID *ToIDType
+// type ToID *ToIDType
 
 // Transition ...
-type Transition *TransitionType
+// type Transition *TransitionType
 
 // UnitOfMeasure ...
 type UnitOfMeasure *UnitOfMeasureType
 
 // Value ...
-type Value *BatchValueType
+// type Value *BatchValueType
 
 // ValueString ...
 type ValueString *ValueStringType

@@ -7,17 +7,17 @@ package b2mml
 // serial number. An object in the equipment model defines a role for the equipment,
 // and object in the physical asset model defines the physical asset ID and properties
 // of a piece of equipment.
-type PhysicalAssetInformation *PhysicalAssetInformationType
+// type PhysicalAssetInformation *PhysicalAssetInformationType
 
 // PhysicalAsset is A representation of a physical piece of equipment is a physical asset.
-type PhysicalAsset *PhysicalAssetType
+// type PhysicalAsset *PhysicalAssetType
 
 // PhysicalAssetClass is A representation of a grouping of physical assets with similar characteristics
 // for purposes of repair and replacement is a physical asset class. Any physical
 // asset is a member of one physical asset class. A physical asset class may be
 // defined as a specialization of zero or more physical asset classes.
 // A physical asset class may be made up of zero or more physical asset classes.
-type PhysicalAssetClass *PhysicalAssetClassType
+// type PhysicalAssetClass *PhysicalAssetClassType
 
 // GetPhysicalAssetInformation ...
 type GetPhysicalAssetInformation *GetPhysicalAssetInformationType

@@ -3,10 +3,10 @@
 package b2mml
 
 // OperationsPerformance ...
-type OperationsPerformance *OperationsPerformanceType
+// type OperationsPerformance *OperationsPerformanceType
 
 // OperationsResponse ...
-type OperationsResponse *OperationsResponseType
+// type OperationsResponse *OperationsResponseType
 
 // GetOperationsPerformance ...
 type GetOperationsPerformance *GetOperationsPerformanceType
@@ -67,10 +67,10 @@ type OperationsResponseType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                   *TransGetType                `xml:"Get"`
-	OperationsPerformance []*OperationsPerformanceType `xml:"OperationsPerformance"`
-}
+// type DataArea struct {
+// 	Get                   *TransGetType                `xml:"Get"`
+// 	OperationsPerformance []*OperationsPerformanceType `xml:"OperationsPerformance"`
+// }
 
 // GetOperationsPerformanceType ...
 type GetOperationsPerformanceType struct {

@@ -50,10 +50,10 @@ type ErrorType1Type struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get          *TransGetType       `xml:"Get"`
-	ErrorMessage []*ErrorMessageType `xml:"ErrorMessage"`
-}
+// type DataArea struct {
+// 	Get          *TransGetType       `xml:"Get"`
+// 	ErrorMessage []*ErrorMessageType `xml:"ErrorMessage"`
+// }
 
 // GetErrorMessageType ...
 type GetErrorMessageType struct {

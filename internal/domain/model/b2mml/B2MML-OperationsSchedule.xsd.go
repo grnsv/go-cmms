@@ -3,10 +3,10 @@
 package b2mml
 
 // OperationsSchedule ...
-type OperationsSchedule *OperationsScheduleType
+// type OperationsSchedule *OperationsScheduleType
 
 // OperationsRequest ...
-type OperationsRequest *OperationsRequestType
+// type OperationsRequest *OperationsRequestType
 
 // GetOperationsSchedule ...
 type GetOperationsSchedule *GetOperationsScheduleType
@@ -92,10 +92,10 @@ type OpSegmentRequirementType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                *TransGetType             `xml:"Get"`
-	OperationsSchedule []*OperationsScheduleType `xml:"OperationsSchedule"`
-}
+// type DataArea struct {
+// 	Get                *TransGetType             `xml:"Get"`
+// 	OperationsSchedule []*OperationsScheduleType `xml:"OperationsSchedule"`
+// }
 
 // GetOperationsScheduleType ...
 type GetOperationsScheduleType struct {

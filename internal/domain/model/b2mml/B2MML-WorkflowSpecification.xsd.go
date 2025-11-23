@@ -3,16 +3,16 @@
 package b2mml
 
 // WorkflowSpecificationInformation ...
-type WorkflowSpecificationInformation *WorkflowSpecificationInformationType
+// type WorkflowSpecificationInformation *WorkflowSpecificationInformationType
 
 // WorkflowSpecification ...
-type WorkflowSpecification *WorkflowSpecificationType
+// type WorkflowSpecification *WorkflowSpecificationType
 
 // WorkflowSpecificationNodeType ...
-type WorkflowSpecificationNodeType *WorkflowSpecificationNodeTypeType
+// type WorkflowSpecificationNodeType *WorkflowSpecificationNodeTypeType
 
 // WorkflowSpecificationConnectionType ...
-type WorkflowSpecificationConnectionType *WorkflowSpecificationConnectionTypeType
+// type WorkflowSpecificationConnectionType *WorkflowSpecificationConnectionTypeType
 
 // GetWorkflowSpecificationInformation ...
 type GetWorkflowSpecificationInformation *GetWorkflowSpecificationInformationType
@@ -219,10 +219,10 @@ type WorkflowSpecificationConnectionTypePropertyType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                              *TransGetType                           `xml:"Get"`
-	WorkflowSpecificationInformation []*WorkflowSpecificationInformationType `xml:"WorkflowSpecificationInformation"`
-}
+// type DataArea struct {
+// 	Get                              *TransGetType                           `xml:"Get"`
+// 	WorkflowSpecificationInformation []*WorkflowSpecificationInformationType `xml:"WorkflowSpecificationInformation"`
+// }
 
 // GetWorkflowSpecificationInformationType ...
 type GetWorkflowSpecificationInformationType struct {

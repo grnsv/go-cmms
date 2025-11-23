@@ -3,16 +3,16 @@
 package b2mml
 
 // OperationsDefinitionInformation ...
-type OperationsDefinitionInformation *OperationsDefinitionInformationType
+// type OperationsDefinitionInformation *OperationsDefinitionInformationType
 
 // OperationsDefinition ...
-type OperationsDefinition *OperationsDefinitionType
+// type OperationsDefinition *OperationsDefinitionType
 
 // OperationsSegment ...
-type OperationsSegment *OperationsSegmentType
+// type OperationsSegment *OperationsSegmentType
 
 // OperationsMaterialBill ...
-type OperationsMaterialBill *OperationsMaterialBillType
+// type OperationsMaterialBill *OperationsMaterialBillType
 
 // GetOperationsDefinitionInformation ...
 type GetOperationsDefinitionInformation *GetOperationsDefinitionInformationType
@@ -181,10 +181,10 @@ type OperationsSegmentType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                             *TransGetType                          `xml:"Get"`
-	OperationsDefinitionInformation []*OperationsDefinitionInformationType `xml:"OperationsDefinitionInformation"`
-}
+// type DataArea struct {
+// 	Get                             *TransGetType                          `xml:"Get"`
+// 	OperationsDefinitionInformation []*OperationsDefinitionInformationType `xml:"OperationsDefinitionInformation"`
+// }
 
 // GetOperationsDefinitionInformationType ...
 type GetOperationsDefinitionInformationType struct {

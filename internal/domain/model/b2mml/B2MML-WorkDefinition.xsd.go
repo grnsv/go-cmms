@@ -3,13 +3,13 @@
 package b2mml
 
 // WorkDefinitionInformation ...
-type WorkDefinitionInformation *WorkDefinitionInformationType
+// type WorkDefinitionInformation *WorkDefinitionInformationType
 
 // WorkMaster ...
-type WorkMaster *WorkMasterType
+// type WorkMaster *WorkMasterType
 
 // WorkDirective ...
-type WorkDirective *WorkDirectiveType
+// type WorkDirective *WorkDirectiveType
 
 // GetWorkDefinitionInformation ...
 type GetWorkDefinitionInformation *GetWorkDefinitionInformationType
@@ -138,10 +138,10 @@ type WorkDirectiveType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                       *TransGetType                    `xml:"Get"`
-	WorkDefinitionInformation []*WorkDefinitionInformationType `xml:"WorkDefinitionInformation"`
-}
+// type DataArea struct {
+// 	Get                       *TransGetType                    `xml:"Get"`
+// 	WorkDefinitionInformation []*WorkDefinitionInformationType `xml:"WorkDefinitionInformation"`
+// }
 
 // GetWorkDefinitionInformationType ...
 type GetWorkDefinitionInformationType struct {

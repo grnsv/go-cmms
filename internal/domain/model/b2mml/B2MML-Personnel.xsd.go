@@ -3,17 +3,17 @@
 package b2mml
 
 // PersonnelInformation ...
-type PersonnelInformation *PersonnelInformationType
+// type PersonnelInformation *PersonnelInformationType
 
 // PersonnelClass is A representation of a grouping of persons with similar characteristics for a definite purpose such as
 // manufacturing operations definition, scheduling, capability and performance is a personnel class.
 // Any person may be a member of zero or more personnel classes. A personnel class may be defined as
 // a specialization of zero or more personnel class. A personnel class may be made up of zero or more personnel class(s).
-type PersonnelClass *PersonnelClassType
+// type PersonnelClass *PersonnelClassType
 
 // Person is A representation of a specifically identified individual is a person.
 // A person may be a member of zero or more personnel classes.
-type Person *PersonType
+// type Person *PersonType
 
 // GetPersonnelInformation ...
 type GetPersonnelInformation *GetPersonnelInformationType
@@ -154,10 +154,10 @@ type PersonnelClassPropertyType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                  *TransGetType               `xml:"Get"`
-	PersonnelInformation []*PersonnelInformationType `xml:"PersonnelInformation"`
-}
+// type DataArea struct {
+// 	Get                  *TransGetType               `xml:"Get"`
+// 	PersonnelInformation []*PersonnelInformationType `xml:"PersonnelInformation"`
+// }
 
 // GetPersonnelInformationType ...
 type GetPersonnelInformationType struct {

@@ -3,13 +3,13 @@
 package b2mml
 
 // ResourceRelationshipNetwork ...
-type ResourceRelationshipNetwork *ResourceRelationshipNetworkType
+// type ResourceRelationshipNetwork *ResourceRelationshipNetworkType
 
 // ResourceRelationshipNetworkInformation ...
-type ResourceRelationshipNetworkInformation *ResourceRelationshipNetworkInformationType
+// type ResourceRelationshipNetworkInformation *ResourceRelationshipNetworkInformationType
 
 // ResourceNetworkConnectionType ...
-type ResourceNetworkConnectionType *ResourceNetworkConnectionTypeType
+// type ResourceNetworkConnectionType *ResourceNetworkConnectionTypeType
 
 // GetResourceRelationshipNetwork ...
 type GetResourceRelationshipNetwork *GetResourceRelationshipNetworkType
@@ -174,10 +174,10 @@ type RNCPropertyType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                         *TransGetType                      `xml:"Get"`
-	ResourceRelationshipNetwork []*ResourceRelationshipNetworkType `xml:"ResourceRelationshipNetwork"`
-}
+// type DataArea struct {
+// 	Get                         *TransGetType                      `xml:"Get"`
+// 	ResourceRelationshipNetwork []*ResourceRelationshipNetworkType `xml:"ResourceRelationshipNetwork"`
+// }
 
 // GetResourceRelationshipNetworkType ...
 type GetResourceRelationshipNetworkType struct {

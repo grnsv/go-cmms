@@ -3,17 +3,17 @@
 package b2mml
 
 // EquipmentInformation is A collection of Role Based Equipment Class and Equipment instance definitions.
-type EquipmentInformation *EquipmentInformationType
+// type EquipmentInformation *EquipmentInformationType
 
 // Equipment ...
-type Equipment *EquipmentType
+// type Equipment *EquipmentType
 
 // EquipmentClass is A representation of a grouping of equipment with similar characteristics for a definite purpose
 // such as manufacturing operations definition, scheduling, capability and performance is an equipment class.
 // Any piece of equipment may be a member of zero or more equipment classes. An equipment class may be
 // defined as a specialization of zero or more equipment classes. An equipment class may be made up of
 // zero or more equipment classes.
-type EquipmentClass *EquipmentClassType
+// type EquipmentClass *EquipmentClassType
 
 // GetEquipmentInformation ...
 type GetEquipmentInformation *GetEquipmentInformationType
@@ -159,10 +159,10 @@ type EquipmentClassPropertyType struct {
 }
 
 // DataArea ...
-type DataArea struct {
-	Get                  *TransGetType               `xml:"Get"`
-	EquipmentInformation []*EquipmentInformationType `xml:"EquipmentInformation"`
-}
+// type DataArea struct {
+// 	Get                  *TransGetType               `xml:"Get"`
+// 	EquipmentInformation []*EquipmentInformationType `xml:"EquipmentInformation"`
+// }
 
 // GetEquipmentInformationType ...
 type GetEquipmentInformationType struct {
