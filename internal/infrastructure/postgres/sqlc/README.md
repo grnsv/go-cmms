@@ -1,4 +1,4 @@
-# SQLC Generated Persistence Layer
+# SQLC Generated postgres Layer
 
 Этот пакет содержит автоматически сгенерированный код доступа к БД с использованием **sqlc**.
 
@@ -68,7 +68,7 @@ type Querier interface {
 
 ### Инициализация
 ```go
-import "github.com/grnsv/go-cmms/internal/infrastructure/persistence/sqlc"
+import "github.com/grnsv/go-cmms/internal/infrastructure/postgres/sqlc"
 
 db := sql.Open("postgres", dsn)
 queries := sqlc.New(db)
@@ -122,11 +122,11 @@ updated, err := queries.UpdateEquipmentStatus(ctx, &sqlc.UpdateEquipmentStatusPa
 
 Для регенерации кода после изменения SQL запросов:
 ```bash
-cd internal/infrastructure/persistence/sqlc
+cd internal/infrastructure/postgres/sqlc
 go generate ./...
 ```
 
 Или напрямую:
 ```bash
-sqlc generate -f internal/infrastructure/persistence/sqlc/sqlc.yaml
+sqlc generate -f internal/infrastructure/postgres/sqlc/sqlc.yaml
 ```
