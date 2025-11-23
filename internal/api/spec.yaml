@@ -1,0 +1,713 @@
+openapi: 3.1.0
+info:
+  title: B2MML-BatchML API
+  description: Простой API на основе схем B2MML-BatchML для обмена данными о производстве. Схемы адаптированы из XSD.
+  version: 1.0.0
+servers:
+  - url: https://api.example.com/v1
+paths:
+  /batches:
+    get:
+      summary: Получить список батчей
+      responses:
+        '200':
+          description: Список батчей
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BatchType'
+    post:
+      summary: Создать новый батч
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchType'
+      responses:
+        '201':
+          description: Батч создан
+  /equipment:
+    get:
+      summary: Получить список оборудования
+      responses:
+        '200':
+          description: Список оборудования
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EquipmentType'
+    post:
+      summary: Добавить оборудование
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EquipmentType'
+      responses:
+        '201':
+          description: Оборудование добавлено
+  /materials:
+    get:
+      summary: Получить список материалов
+      responses:
+        '200':
+          description: Список материалов
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MaterialType'
+    post:
+      summary: Добавить материал
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MaterialType'
+      responses:
+        '201':
+          description: Материал добавлен
+  /persons:
+    get:
+      summary: Получить список персон (Person)
+      responses:
+        '200':
+          description: Список персон
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PersonType'
+    post:
+      summary: Добавить персону
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PersonType'
+      responses:
+        '201':
+          description: Персона добавлена
+  /personnel-classes:
+    get:
+      summary: Получить список классов персонала (PersonnelClass)
+      responses:
+        '200':
+          description: Список классов персонала
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PersonnelClassType'
+    post:
+      summary: Добавить класс персонала
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PersonnelClassType'
+      responses:
+        '201':
+          description: Класс персонала добавлен
+  /personnel-information:
+    get:
+      summary: Получить информацию о персонале (PersonnelInformation)
+      responses:
+        '200':
+          description: Информация о персонале
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PersonnelInformationType'
+    post:
+      summary: Добавить информацию о персонале
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PersonnelInformationType'
+      responses:
+        '201':
+          description: Информация добавлена
+components:
+  schemas:
+    # Схемы из BatchML.xsd
+    BatchMLType:
+      type: object
+      properties:
+        Header:
+          $ref: '#/components/schemas/HeaderType'
+        Batch:
+          type: array
+          items:
+            $ref: '#/components/schemas/BatchType'
+    HeaderType:
+      type: object
+      properties:
+        Sender:
+          $ref: '#/components/schemas/PartyType'
+        Receiver:
+          $ref: '#/components/schemas/PartyType'
+        Document:
+          $ref: '#/components/schemas/DocumentType'
+        CreationDateTime:
+          type: string
+          format: date-time
+    PartyType:
+      type: object
+      properties:
+        ID:
+          type: string
+        Name:
+          type: string
+    DocumentType:
+      type: object
+      properties:
+        ID:
+          type: string
+        Type:
+          type: string
+        Version:
+          type: string
+    BatchType:
+      type: object
+      properties:
+        BatchID:
+          type: string
+        BatchStartTime:
+          type: string
+          format: date-time
+        BatchEndTime:
+          type: string
+          format: date-time
+        BatchStatus:
+          type: string
+          enum: [Planned, InProgress, Completed, Failed, Cancelled]
+        BatchRecords:
+          $ref: '#/components/schemas/BatchRecordsType'
+    BatchRecordsType:
+      type: object
+      properties:
+        Record:
+          type: array
+          items:
+            $ref: '#/components/schemas/RecordType'
+    RecordType:
+      type: object
+      properties:
+        RecordID:
+          type: string
+        RecordType:
+          type: string
+        RecordData:
+          type: object  # anyType в XSD, так что object
+          additionalProperties: true
+    # Схемы из Equipment.xsd
+    EquipmentType:
+      type: object
+      properties:
+        EquipmentID:
+          type: string
+        EquipmentType:
+          type: string
+        Description:
+          type: string
+        Manufacturer:
+          type: string
+        Model:
+          type: string
+        SerialNumber:
+          type: string
+        InstallationDate:
+          type: string
+          format: date-time
+        Location:
+          $ref: '#/components/schemas/LocationType'
+        MaintenanceHistory:
+          $ref: '#/components/schemas/MaintenanceHistoryType'
+        PerformanceData:
+          $ref: '#/components/schemas/PerformanceDataType'
+    LocationType:
+      type: object
+      properties:
+        SiteID:
+          type: string
+        BuildingID:
+          type: string
+        FloorID:
+          type: string
+        AreaID:
+          type: string
+        Coordinates:
+          $ref: '#/components/schemas/CoordinatesType'
+    CoordinatesType:
+      type: object
+      properties:
+        X:
+          type: number
+        Y:
+          type: number
+        Z:
+          type: number
+    MaintenanceHistoryType:
+      type: object
+      properties:
+        MaintenanceEvent:
+          type: array
+          items:
+            $ref: '#/components/schemas/MaintenanceEventType'
+    MaintenanceEventType:
+      type: object
+      properties:
+        EventID:
+          type: string
+        EventDate:
+          type: string
+          format: date-time
+        Description:
+          type: string
+        PerformedBy:
+          type: string
+        PartsReplaced:
+          type: string
+        DowntimeHours:
+          type: number
+    PerformanceDataType:
+      type: object
+      properties:
+        Metric:
+          type: array
+          items:
+            $ref: '#/components/schemas/MetricType'
+    MetricType:
+      type: object
+      properties:
+        MetricName:
+          type: string
+        Value:
+          type: number
+        UnitOfMeasure:
+          type: string
+        Timestamp:
+          type: string
+          format: date-time
+    # Схемы из Material.xsd
+    MaterialType:
+      type: object
+      properties:
+        MaterialID:
+          type: string
+        MaterialDescription:
+          type: string
+        MaterialTypeCode:
+          type: string
+        MaterialCategory:
+          $ref: '#/components/schemas/MaterialCategoryType'
+        MaterialProperties:
+          $ref: '#/components/schemas/MaterialPropertiesType'
+        MaterialComposition:
+          $ref: '#/components/schemas/MaterialCompositionType'
+        MaterialSource:
+          $ref: '#/components/schemas/MaterialSourceType'
+        MaterialUsage:
+          $ref: '#/components/schemas/MaterialUsageType'
+        MaterialHandlingInstructions:
+          type: string
+        RegulatoryInformation:
+          $ref: '#/components/schemas/RegulatoryInformationType'
+        TraceabilityInformation:
+          $ref: '#/components/schemas/TraceabilityInformationType'
+    MaterialCategoryType:
+      type: object
+      properties:
+        CategoryCode:
+          type: string
+        CategoryDescription:
+          type: string
+    MaterialPropertiesType:
+      type: object
+      properties:
+        PhysicalProperties:
+          $ref: '#/components/schemas/PhysicalPropertiesType'
+        ChemicalProperties:
+          $ref: '#/components/schemas/ChemicalPropertiesType'
+        MechanicalProperties:
+          $ref: '#/components/schemas/MechanicalPropertiesType'
+        ThermalProperties:
+          $ref: '#/components/schemas/ThermalPropertiesType'
+        ElectricalProperties:
+          $ref: '#/components/schemas/ElectricalPropertiesType'
+    PhysicalPropertiesType:
+      type: object
+      properties:
+        Density:
+          type: number
+        Viscosity:
+          type: number
+        ParticleSize:
+          type: number
+        SurfaceArea:
+          type: number
+    ChemicalPropertiesType:
+      type: object
+      properties:
+        ChemicalComposition:
+          type: array
+          items:
+            $ref: '#/components/schemas/ChemicalCompositionType'
+        pH:
+          type: number
+        Reactivity:
+          type: string
+    ChemicalCompositionType:
+      type: object
+      properties:
+        ElementSymbol:
+          type: string
+        ElementPercentage:
+          type: number
+    MechanicalPropertiesType:
+      type: object
+      properties:
+        TensileStrength:
+          type: number
+        YieldStrength:
+          type: number
+        Elongation:
+          type: number
+        Hardness:
+          type: string
+    ThermalPropertiesType:
+      type: object
+      properties:
+        MeltingPoint:
+          type: number
+        BoilingPoint:
+          type: number
+        ThermalConductivity:
+          type: number
+        SpecificHeat:
+          type: number
+    ElectricalPropertiesType:
+      type: object
+      properties:
+        Conductivity:
+          type: number
+        DielectricConstant:
+          type: number
+        Resistance:
+          type: number
+    MaterialCompositionType:
+      type: object
+      properties:
+        BaseMaterial:
+          type: string
+        Additives:
+          $ref: '#/components/schemas/AdditivesType'
+        Contaminants:
+          $ref: '#/components/schemas/ContaminantsType'
+    AdditivesType:
+      type: object
+      properties:
+        Additive:
+          type: array
+          items:
+            $ref: '#/components/schemas/AdditiveType'
+    AdditiveType:
+      type: object
+      properties:
+        AdditiveID:
+          type: string
+        AdditiveDescription:
+          type: string
+        AdditivePercentage:
+          type: number
+    ContaminantsType:
+      type: object
+      properties:
+        Contaminant:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContaminantType'
+    ContaminantType:
+      type: object
+      properties:
+        ContaminantID:
+          type: string
+        ContaminantDescription:
+          type: string
+        ContaminantLevel:
+          type: number
+    MaterialSourceType:
+      type: object
+      properties:
+        SourceID:
+          type: string
+        SourceName:
+          type: string
+        SourceLocation:
+          type: string
+        SupplyChainStep:
+          type: string
+    MaterialUsageType:
+      type: object
+      properties:
+        IntendedUse:
+          type: string
+        ApplicationMethod:
+          type: string
+        QuantityRequired:
+          type: number
+        UnitOfMeasure:
+          type: string
+    RegulatoryInformationType:
+      type: object
+      properties:
+        RegulatoryStatus:
+          type: string
+        ComplianceStandards:
+          type: string
+        CertificationDetails:
+          $ref: '#/components/schemas/CertificationDetailsType'
+    CertificationDetailsType:
+      type: object
+      properties:
+        CertificationBody:
+          type: string
+        CertificateNumber:
+          type: string
+        IssueDate:
+          type: string
+          format: date
+        ExpiryDate:
+          type: string
+          format: date
+    TraceabilityInformationType:
+      type: object
+      properties:
+        BatchNumber:
+          type: string
+        LotNumber:
+          type: string
+        ProductionDate:
+          type: string
+          format: date
+        ExpirationDate:
+          type: string
+          format: date
+        TraceHistory:
+          type: array
+          items:
+            $ref: '#/components/schemas/TraceHistoryType'
+    TraceHistoryType:
+      type: object
+      properties:
+        Timestamp:
+          type: string
+          format: date-time
+        Location:
+          type: string
+        Action:
+          type: string
+        ResponsibleParty:
+          type: string
+    # Схемы из Personnel.xsd
+    PersonnelInformationType:
+      type: object
+      properties:
+        ID:
+          type: string
+        Description:
+          type: array
+          items:
+            type: string
+        HierarchyScope:
+          $ref: '#/components/schemas/HierarchyScopeType'
+        PublishedDate:
+          type: string
+          format: date-time
+        Person:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonType'
+        PersonnelClass:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonnelClassType'
+        TestSpecification:
+          type: array
+          items:
+            $ref: '#/components/schemas/TestSpecificationType'
+
+    PersonType:
+      type: object
+      required:
+        - ID
+      properties:
+        ID:
+          type: string
+        Version:
+          type: string
+        Description:
+          type: array
+          items:
+            type: string
+        PublishedDate:
+          type: string
+          format: date-time
+        EffectiveStartDate:
+          type: string
+          format: date-time
+        EffectiveEndDate:
+          type: string
+          format: date-time
+        HierarchyScope:
+          $ref: '#/components/schemas/HierarchyScopeType'
+        PersonName:
+          type: string
+        SpatialDefinition:
+          $ref: '#/components/schemas/SpatialDefinitionType'
+        OperationalLocation:
+          $ref: '#/components/schemas/ResourceLocationType'
+        PersonProperty:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonPropertyType'
+        PersonnelClassID:
+          type: array
+          items:
+            type: string
+        TestSpecificationID:
+          type: array
+          items:
+            type: string
+
+    PersonPropertyType:
+      type: object
+      required:
+        - ID
+      properties:
+        ID:
+          type: string
+        Description:
+          type: array
+          items:
+            type: string
+        Value:
+          type: array
+          items:
+            $ref: '#/components/schemas/ValueType'
+        PersonPropertyChild:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonPropertyType'
+        PersonnelClassPropertyID:
+          type: string
+
+    PersonnelClassType:
+      type: object
+      required:
+        - ID
+      properties:
+        ID:
+          type: string
+        Version:
+          type: string
+        Description:
+          type: array
+          items:
+            type: string
+        PublishedDate:
+          type: string
+          format: date-time
+        EffectiveStartDate:
+          type: string
+          format: date-time
+        EffectiveEndDate:
+          type: string
+          format: date-time
+        HierarchyScope:
+          $ref: '#/components/schemas/HierarchyScopeType'
+        PersonnelClassBaseID:
+          type: array
+          items:
+            type: string
+        PersonnelClassProperty:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonnelClassPropertyType'
+        PersonSourceID:
+          type: array
+          items:
+            type: string
+        TestSpecificationID:
+          type: array
+          items:
+            type: string
+
+    PersonnelClassPropertyType:
+      type: object
+      required:
+        - ID
+      properties:
+        ID:
+          type: string
+        Description:
+          type: array
+          items:
+            type: string
+        PropertyType:
+          type: string
+        Value:
+          type: array
+          items:
+            $ref: '#/components/schemas/ValueType'
+        PersonnelClassPropertyChild:
+          type: array
+          items:
+            $ref: '#/components/schemas/PersonnelClassPropertyType'
+
+    # Плейсхолдеры для Common.xsd и других
+    HierarchyScopeType:
+      type: object
+      additionalProperties: true  # Гибкий, т.к. не полный XSD
+
+    SpatialDefinitionType:
+      type: object
+      additionalProperties: true
+
+    ResourceLocationType:
+      type: object
+      additionalProperties: true
+
+    ValueType:
+      type: object
+      properties:
+        value:
+          type: string
+        unitOfMeasure:
+          type: string
+
+    TestSpecificationType:
+      type: object
+      properties:
+        ID:
+          type: string
+        Description:
+          type: string
+      additionalProperties: true
