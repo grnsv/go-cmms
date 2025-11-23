@@ -12,6 +12,7 @@ require (
 	github.com/go-faster/errors v0.7.1
 	github.com/go-faster/jx v1.1.0
 	github.com/google/uuid v1.6.0
+	github.com/lib/pq v1.10.9
 	github.com/ogen-go/ogen v1.16.0
 	github.com/sqlc-dev/pqtype v0.3.0
 	go.opentelemetry.io/otel v1.38.0
